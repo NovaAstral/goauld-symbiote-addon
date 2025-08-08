@@ -56,6 +56,8 @@ if SERVER then
     end
 
     function SWEP:PrimaryAttack()
+        if(self.HostPly ~= nil) then return end --prevent any bugs if you already have a host, you must release your host first
+        
         local tr = self:GetOwner():GetEyeTraceNoCursor()
 
         if(self:GetOwner():GetShootPos():Distance(tr.HitPos) <= 100 and IsValid(tr.Entity) and tr.Entity:IsPlayer()) then
