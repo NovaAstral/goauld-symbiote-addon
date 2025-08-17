@@ -1,8 +1,8 @@
 if SERVER then
     hook.Add("PlayerSay","GoauldControlBlockChat",function(ply,str,team,dead) 
         if(ply.IsGoauldControlled == true) then
-            ply.GoauldPly:PrintMessage(3,"Your host tried to say: \n"..str) --Chat/Console
-            ply.GoauldPly:PrintMessage(4,"Your host tried to say: \n"..str) --Center of the screen
+            ply.GoauldPly:PrintMessage(3,"Your host "..ply:Name().." tried to say: \n"..str) --Chat/Console
+            ply.GoauldPly:PrintMessage(4,"Your host "..ply:Name().." tried to say: \n"..str) --Center of the screen
 
             ply:PrintMessage(4,"You are being controlled by a Goa'uld symbiote, only your symbiote can hear you.") --Center of the screen
             ply:PrintMessage(2,"You are being controlled by a Goa'uld symbiote, only your symbiote can hear you.") --Console
