@@ -31,7 +31,9 @@ end
 
 if CLIENT then
     hook.Add("PlayerStartVoice", "ImageOnVoice", function(ply)
-        ply:PrintMessage(4,"You are being controlled by a Goa'uld symbiote, only your symbiote can hear you.") --Center of the screen
-        ply:PrintMessage(2,"You are being controlled by a Goa'uld symbiote, only your symbiote can hear you.") --Console
+        if(ply.IsGoauldControlled == true) then
+            ply:PrintMessage(4,"You are being controlled by a Goa'uld symbiote, only your symbiote can hear you.") --Center of the screen
+            ply:PrintMessage(2,"You are being controlled by a Goa'uld symbiote, only your symbiote can hear you.") --Console
+        end
     end)
 end

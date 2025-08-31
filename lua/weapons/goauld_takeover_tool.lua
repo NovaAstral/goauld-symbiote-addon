@@ -5,13 +5,16 @@ SWEP.Purpose = "Take over a players body"
 SWEP.DrawCrosshair = false
 SWEP.SlotPos = 1
 SWEP.Slot = 0
-SWEP.Spawnable = true
 SWEP.Weight = 1
 SWEP.HoldType = "normal"
 SWEP.Primary.Ammo = "none" --This stops it from giving pistol ammo when you get the hands
 SWEP.Primary.Automatic = true
 SWEP.Secondary.Ammo = "none"
 SWEP.Secondary.Automatic = true
+
+SWEP.Category = "Stargate"
+SWEP.Spawnable = true
+SWEP.AdminOnly = true
 
 SWEP.HostPly = nil
 
